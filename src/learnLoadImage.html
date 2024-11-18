@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="author" content="露水晰123,1542249206@qq.com" />
+    <meta name="keywords" content="JQuery,gulp" />
+    <meta name="description" content="使用gulp作为构建工具,学习JQuery" />
+    <title>LearnLoadImage页面</title>
+    <!-- 引入scss -->
+    <link rel="stylesheet" href="assets/styles/learnLoadImageDefault.scss" />
+</head>
+<body>
+    <h3 class="title">Index页面（图片懒加载/预加载）</h3>
+    <div class="container">
+        <!-- <p>哈喽，我是露水晰123!</p> -->
+        <p>懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。</p>
+        <img class="lazy" data-src="public/images/img-1.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-2.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-3.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-4.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-5.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-6.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-7.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-8.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-9.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-10.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-11.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-12.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-13.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-14.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-15.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-16.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-17.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-18.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            预加载，是先将图片缓存到本地，在使用的时候去缓存里拿。预加载有两种实现方式，一种是通过link标签，设置rel为preload，便可以提前记载，且不会阻塞页面的渲染；第二种是通过创建Image对象，给该Image对象设置src值，即现在去向服务器发起图片资源请求，从而将图片缓存到本地。
+        </p>
+        <img class="lazy" data-src="public/images/img-19.jpg" alt="图片正在加载中..." />
+        <p class="text">
+            懒加载，又称延迟加载，目的是做到按需加载，只有在图片出现在可视区域才加载。初始状态下不根img标签的src设置真正的图片地址，而是将真正的地址放在data-src属性里。监听页面的滚动，通过计算，判断未加载的图片是否出现在可视区域，若是则将data-src的值赋值给src，从而完成了图片的延迟加载。
+        </p>
+        <img class="lazy" data-src="public/images/img-20.jpg" alt="图片正在加载中..." />
+    </div>
+    <!-- 引入js -->
+    <script src="assets/js/learnLoadImageDefault.js"></script>
+</body>
+</html>
