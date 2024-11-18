@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.title {
+    text-align: center;
+    padding: 20px;
+}
+.container {
+    padding: 20px;
+    p {
+        text-indent: 2em;
+        &.text {
+            margin-top: 20px;
+        }
+    }
+    img.lazy {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 620px;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid;
+        margin-top: 20px;
+        /* 学习文章: https: //www.jb51.net/article/91210.htm */
+        /* 给图片的延迟加载增加淡入淡出的效果 */
+        opacity: 1;
+        transition: opacity .6s ease-in;
+    }
+    img.lazy[data-src] {
+        opacity: 0;
+    }
+}
