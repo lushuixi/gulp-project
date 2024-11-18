@@ -85,7 +85,7 @@ pnpm create:page learnProxy --js slide --css main
 - 文件命名格式: 使用**小驼峰命名**格式(首字母小写), 如 learnProxy.htmml, learnProxyDefault.js
 - html页面对应的静态资源名城**必须以该html页面的名称**开头, 如about.html, 它的资源文件名称aboutDefault.js, aboutSlide.js, aboutMain.css
 - 业务逻辑在src目录下进行开发，**使用相对路径**（否则可能导致打包后因路径问题而页面内容不完整问题）
-- gulp-webserver开启本地服务,  **监听src目录**
+- gulp-webserver开启本地服务,  **监听build目录**
 - src下目录结构如下：
 
 ```
