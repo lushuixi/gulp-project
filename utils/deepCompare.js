@@ -122,14 +122,15 @@ function compareTwoData(curNewItem, curOldItem) {
 // console.log(compareArray([{
 //     id:12,
 //     child: [],
-//     name:"露水晰",
+//     name:"露水晰123",
 //     price:null,
 // }],[{
-//     id:12,
+//     price:null,
 //     child:[],
-//     name:"露水晰",
-//     price:null
+//     id:12,
+//     name:"露水晰123",
 // }]))
+// 打印结果:true
 
 export {
     compareObject,
