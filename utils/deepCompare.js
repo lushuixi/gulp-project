@@ -20,6 +20,7 @@ function getObjectType(obj) {
  * @returns 
  */
 function compareObject (curNewItem, curOldItem) {
+    // ==获取自身定义的key集合==
     const newKeys = Object.keys(curNewItem)
     const oldKeys = Object.keys(curOldItem)
     if (newKeys.length !== oldKeys.length) {
@@ -34,13 +35,17 @@ function compareObject (curNewItem, curOldItem) {
     }
     let i = 0
     while (i < newKeys.length) {
-        const curNewKey = newKeys[i]
-        const curOldKey = oldKeys[i]
-        if (curNewKey !== curOldKey) {
-            // ==key不相同==
+        // ==当前key==
+        const curKey = newKeys[i]
+        // ==新增:搞乱key的顺序依然可以根据key比较==
+        const curOldItemHasKey = oldKeys.includes(curKey)
+        if (!curOldItemHasKey) {
+            // ==有不同的key==
+            // ==修改:若new中的key在old中不存在即有不同==
+            // ==修改:在curOldItem找不到curNewItem对应的key==
             return false
         }
-        if (!compareTwoData(curNewItem[curNewKey], curOldItem[curOldKey])) {
+        if (!compareTwoData(curNewItem[curKey], curOldItem[curKey])) {
             return false
         }
         i++
