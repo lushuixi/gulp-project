@@ -108,8 +108,8 @@ async function main() {
         // ==生成scss文件==
         if (result.scss) {
             result.scss = join(assetsDir, `styles/${getAssetsName(result.pageName, result.scss)}.scss`)
-            // const createCssPathAbsolute = resolve(projectDir, srcDir, result.scss)
-            createFileSync(join(srcDir, result.scss), `/**
+            const createSCssPathAbsolute = resolve(projectDir, srcDir, result.scss)
+            createFileSync(createSCssPathAbsolute, `/**
  * ${result.pageName}.html的样式
  */
 `)
@@ -117,9 +117,8 @@ async function main() {
         // ==生成css文件==
         if (result.css) {
             result.css = join(assetsDir, `styles/${getAssetsName(result.pageName, result.css)}.css`)
-            // const createCssPathAbsolute = resolve(projectDir, srcDir, result.css)
-            const createCssPathAbsolute = resolve(srcDir, result.css)
-            createFileSync(join((srcDir, result.css)), `/**
+            const createCssPathAbsolute = resolve(projectDir, srcDir, result.css)
+            createFileSync(createCssPathAbsolute, `/**
  * ${result.pageName}.html的样式
  */
 `)
@@ -128,8 +127,8 @@ async function main() {
         // ==生成js文件==
         if (result.js) {
             result.js = join(assetsDir, `js/${getAssetsName(result.pageName, result.js)}.js`)
-            // const createJsPathAbsolute = resolve(projectDir, srcDir, result.js)
-            createFileSync(join((srcDir, result.js)), `/**
+            const createJsPathAbsolute = resolve(projectDir, srcDir, result.js)
+            createFileSync(createJsPathAbsolute, `/**
  * ${result.pageName}.html的执行脚本
  */
 console.log("哈喽,我是露水晰123!")
@@ -138,7 +137,9 @@ console.log("这是${result.pageName}的执行脚本")
         }
 
         // ==生成html文件==
-        createFileSync(join(srcDir, `${result.pageName}.html`), `<!DOCTYPE html>
+        // ==处理页面名称:首字母大写==
+        const standardPageName = result.pageName[0].toUpperCase() + result.pageName.substring(1)
+        createFileSync(resolve(srcDir, `${result.pageName}.html`), `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -147,12 +148,12 @@ console.log("这是${result.pageName}的执行脚本")
     <meta name="author" content="露水晰123,1542249206@qq.com" />
     <meta name="keywords" content="JQuery,gulp" />
     <meta name="description" content="使用gulp作为构建工具,学习JQuery" />
-    <title>${result.pageName[0].toUpperCase() + result.pageName.substring(1)}页面</title>
+    <title>${standardPageName}页面</title>
     ${result.scss ? `<link rel="stylesheet" href="${getHandlePathOfHtml(result.scss)}" />` : ""}
     ${result.css ? `<link rel="stylesheet" href="${getHandlePathOfHtml(result.css)}" />` : ""}
 </head>
 <body>
-    <h3>Index页面</h3>
+    <h3>${standardPageName}页面</h3>
     ${result.js ? `<script src="${getHandlePathOfHtml(result.js)}"></script>` : ""}
 </body>
 </html>`)
