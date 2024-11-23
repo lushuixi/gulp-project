@@ -104,7 +104,7 @@ function createFileSync(file, content, force = false, error = true) {
             writeFileSync(file, content)
             console.log(green(`${getStandardPath(file)} Finished!`))
         } else if (error) {
-            throw new Error(yellow(`${file} Existed!`))
+            throw new Error(yellow(`${getStandardPath(file)} Existed!`))
         } else {
             console.log(yellow(`${getStandardPath(file)} Existed!`))
         }
